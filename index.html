@@ -1,0 +1,882 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MistFell | Ancient Wisdom • Modern Science</title>
+
+<meta name="description" content="MistFell is a medicinal intelligence and biotechnology research knowledge platform connecting ancient wisdom with modern science.">
+
+<style>
+:root {
+  --dark:#081b13;
+  --green:#17452e;
+  --light:#b9d69e;
+  --cream:#f4f5ed;
+  --gold:#c9ac70;
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body {
+  font-family:Arial, sans-serif;
+  background:var(--cream);
+  color:#20372a;
+  line-height:1.7;
+}
+
+nav {
+  background:var(--dark);
+  padding:18px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:15px;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.logo {
+  color:white;
+  font-size:27px;
+  font-weight:bold;
+  letter-spacing:4px;
+}
+
+.logo span {color:var(--light);}
+
+nav ul {
+  display:flex;
+  list-style:none;
+  gap:20px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+nav a {
+  text-decoration:none;
+  color:white;
+  font-size:13px;
+}
+
+nav a:hover {color:var(--light);}
+
+.login-nav {
+  background:var(--light);
+  color:var(--dark);
+  padding:9px 17px;
+  border-radius:4px;
+  font-weight:bold;
+  cursor:pointer;
+  border:0;
+}
+
+.hero {
+  min-height:620px;
+  display:flex;
+  align-items:center;
+  padding:80px 10%;
+  color:white;
+  background:
+  linear-gradient(90deg,rgba(3,20,13,.95),rgba(9,43,27,.65)),
+  url("https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1800&q=85") center/cover;
+}
+
+.hero-content {max-width:760px;}
+
+.eyebrow {
+  color:#b9d69e;
+  text-transform:uppercase;
+  letter-spacing:4px;
+  font-size:12px;
+}
+
+h1 {
+  font-size:clamp(42px,7vw,76px);
+  line-height:1.15;
+  margin:25px 0;
+}
+
+h1 span {color:var(--light);}
+
+.hero p {
+  color:#e1e9e0;
+  font-size:18px;
+  max-width:650px;
+  margin-bottom:30px;
+}
+
+.btn {
+  display:inline-block;
+  background:var(--light);
+  color:var(--dark);
+  padding:13px 25px;
+  border-radius:4px;
+  font-weight:bold;
+  text-decoration:none;
+  border:0;
+  cursor:pointer;
+}
+
+.btn:hover {background:white;}
+
+section {padding:85px 10%;}
+
+.section-title {
+  font-size:37px;
+  color:var(--green);
+  margin:12px 0;
+}
+
+.intro {
+  color:#627064;
+  max-width:780px;
+  margin-bottom:35px;
+}
+
+.about {
+  background:white;
+  text-align:center;
+}
+
+.about p {
+  max-width:850px;
+  margin:15px auto;
+  color:#58665b;
+  font-size:17px;
+}
+
+.research {background:#eaf0e5;}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.card {
+  background:white;
+  padding:28px;
+  border-radius:7px;
+  border-bottom:4px solid #9dbd84;
+  transition:.3s;
+}
+
+.card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px #00000012;
+}
+
+.card h3 {
+  color:var(--green);
+  margin:10px 0;
+}
+
+.card p {color:#647064;font-size:14px;}
+
+.number {
+  color:#8cae75;
+  font-size:30px;
+  font-weight:bold;
+}
+
+.biotech {
+  background:var(--dark);
+  color:white;
+}
+
+.biotech .section-title {color:var(--light);}
+.biotech .intro {color:#c4d2c6;}
+.biotech .card {background:#173629;}
+.biotech .card h3 {color:var(--light);}
+.biotech .card p {color:#d2ddd3;}
+
+.founder {
+  background:white;
+}
+
+.founder-box {
+  display:grid;
+  grid-template-columns:1fr 1.5fr;
+  gap:45px;
+  align-items:center;
+}
+
+.founder-visual {
+  min-height:350px;
+  background:linear-gradient(145deg,#173e2b,#8aa779);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  border-radius:8px;
+  padding:30px;
+  color:white;
+}
+
+.founder-visual h2 {
+  font-size:35px;
+  letter-spacing:3px;
+}
+
+.founder-text p {
+  margin:15px 0;
+  color:#58665b;
+}
+
+.founder-text h3 {
+  font-size:27px;
+  color:var(--green);
+}
+
+.social-links {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:25px;
+}
+
+.social-links a {
+  text-decoration:none;
+  padding:11px 17px;
+  background:var(--green);
+  color:white;
+  border-radius:4px;
+  font-size:14px;
+}
+
+.social-links a:hover {background:#527c52;}
+
+.login-section {
+  background:#eaf0e5;
+  text-align:center;
+}
+
+.login-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:35px;
+}
+
+.login-card {
+  background:white;
+  padding:25px 15px;
+  border-radius:7px;
+  border:1px solid #dce5d7;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.login-card:hover {
+  border-color:#739c61;
+  transform:translateY(-4px);
+}
+
+.login-card .symbol {
+  font-size:30px;
+}
+
+.login-card h3 {
+  color:var(--green);
+  margin:8px 0;
+}
+
+.login-card p {
+  color:#758075;
+  font-size:12px;
+}
+
+.plants {background:white;}
+
+.plant-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+.plant {
+  padding:24px;
+  background:#f0f4eb;
+  border-left:4px solid #8da978;
+}
+
+.plant h3 {color:var(--green);}
+.plant p {color:#627064;font-size:14px;}
+
+.statement {
+  background:#dfe9d8;
+  text-align:center;
+}
+
+.statement h2 {
+  color:var(--green);
+  font-size:clamp(28px,5vw,45px);
+}
+
+.contact {
+  background:white;
+  text-align:center;
+}
+
+.contact p {margin:12px;color:#657166;}
+
+.contact a {
+  color:var(--green);
+  font-weight:bold;
+}
+
+footer {
+  background:var(--dark);
+  color:white;
+  text-align:center;
+  padding:40px 15px;
+}
+
+footer h2 {letter-spacing:4px;}
+footer span {color:var(--light);}
+footer p {font-size:13px;color:#b9c8ba;margin-top:8px;}
+
+.modal {
+  display:none;
+  position:fixed;
+  inset:0;
+  background:#000b;
+  z-index:500;
+  align-items:center;
+  justify-content:center;
+  padding:15px;
+}
+
+.modal.show {display:flex;}
+
+.modal-box {
+  background:white;
+  padding:35px;
+  border-radius:10px;
+  width:100%;
+  max-width:430px;
+  position:relative;
+}
+
+.modal-box h2 {
+  color:var(--green);
+  margin-bottom:8px;
+}
+
+.modal-box p {
+  color:#687469;
+  font-size:13px;
+  margin-bottom:15px;
+}
+
+.modal-box input,
+.modal-box select {
+  width:100%;
+  padding:13px;
+  margin:9px 0;
+  border:1px solid #ccd7ca;
+  border-radius:4px;
+  font-size:14px;
+}
+
+.modal-box .btn {
+  width:100%;
+  margin-top:12px;
+}
+
+.close {
+  position:absolute;
+  right:17px;
+  top:12px;
+  font-size:26px;
+  cursor:pointer;
+  color:#405647;
+}
+
+#login-message {
+  margin-top:15px;
+  color:#a04b36;
+  font-size:13px;
+}
+
+@media(max-width:800px) {
+  nav {justify-content:center;}
+  nav ul {justify-content:center;}
+  .grid,.login-grid {grid-template-columns:1fr 1fr;}
+  .founder-box {grid-template-columns:1fr;}
+  .hero {min-height:530px;}
+}
+
+@media(max-width:520px) {
+  .grid,.login-grid,.plant-grid {grid-template-columns:1fr;}
+  section {padding:60px 7%;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+  <div class="logo">MIST<span>FELL</span></div>
+
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#biotech">Biotechnology</a></li>
+    <li><a href="#founder">Founder</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><button class="login-nav" onclick="openLogin()">LOGIN</button></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+
+<header class="hero" id="home">
+  <div class="hero-content">
+    <div class="eyebrow">Ancient Wisdom • Modern Science</div>
+
+    <h1>
+      Understanding<br>
+      Nature's <span>Intelligence.</span>
+    </h1>
+
+    <p>
+      Connecting ancient medicinal knowledge with modern
+      biological science to understand medicinal plants,
+      bioactive compounds and their interactions with
+      biological systems.
+    </p>
+
+    <a href="#research" class="btn">Explore Our Research</a>
+  </div>
+</header>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+  <div class="eyebrow">Our Identity</div>
+  <h2 class="section-title">Welcome to MistFell</h2>
+
+  <p>
+    Nature holds an extraordinary library of biological
+    knowledge. For generations, traditional knowledge
+    systems have recognised the importance of medicinal
+    plants, roots, herbs, fruits and natural compounds.
+  </p>
+
+  <p>
+    MistFell aims to connect this knowledge with modern
+    scientific research, biotechnology and molecular
+    understanding.
+  </p>
+
+  <p>
+    We are building a knowledge-driven platform to
+    investigate, organise and communicate medicinal
+    intelligence through scientific literature and
+    research.
+  </p>
+</section>
+
+<!-- RESEARCH -->
+
+<section class="research" id="research">
+  <div class="eyebrow">Knowledge Discovery</div>
+  <h2 class="section-title">Our Research Areas</h2>
+
+  <p class="intro">
+    Investigating the chemistry of nature through
+    scientific literature, biological mechanisms
+    and evidence-based understanding.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="number">01</div>
+      <h3>Medicinal Plants</h3>
+      <p>Exploring medicinal plants and their traditional
+      applications through scientific research.</p>
+    </div>
+
+    <div class="card">
+      <div class="number">02</div>
+      <h3>Bioactive Compounds</h3>
+      <p>Studying flavonoids, alkaloids, terpenoids,
+      polyphenols and other phytochemicals.</p>
+    </div>
+
+    <div class="card">
+      <div class="number">03</div>
+      <h3>Cellular Biology</h3>
+      <p>Understanding cells, mitochondria, proteins,
+      enzymes and molecular pathways.</p>
+    </div>
+
+    <div class="card">
+      <div class="number">04</div>
+      <h3>Phytochemistry</h3>
+      <p>Investigating the chemical composition of
+      plants and natural substances.</p>
+    </div>
+
+    <div class="card">
+      <div class="number">05</div>
+      <h3>Pharmacognosy</h3>
+      <p>Studying natural medicinal substances,
+      identification and biological properties.</p>
+    </div>
+
+    <div class="card">
+      <div class="number">06</div>
+      <h3>Scientific Literature</h3>
+      <p>Connecting published studies, scientific
+      evidence and research limitations.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- BIOTECHNOLOGY -->
+
+<section class="biotech" id="biotech">
+  <div class="eyebrow">Science • Research • Discovery</div>
+  <h2 class="section-title">Biotechnology Research at MistFell</h2>
+
+  <p class="intro">
+    Where ancient medicinal knowledge meets modern
+    biological science.
+
+    We explore plant-derived compounds and investigate
+    their reported interactions with biological systems.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="number">01</div>
+      <h3>Molecular Biology</h3>
+      <p>DNA, RNA, proteins and the molecular processes
+      that regulate living systems.</p>
+    </div>
+
+    <div class="card">
+      <div class="number">02</div>
+      <h3>Phytochemical Research</h3>
+      <p>Understanding natural chemical constituents
+      and their biological activities.</p>
+    </div>
+
+    <div class="card">
+      <div class="number">03</div>
+      <h3>Cellular Mechanisms</h3>
+      <p>Investigating cellular signalling, oxidative
+      stress and biological responses.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PLANTS -->
+
+<section class="plants" id="plants">
+  <div class="eyebrow">Nature's Chemistry</div>
+  <h2 class="section-title">The Intelligence Within Plants</h2>
+
+  <p class="intro">
+    Every plant has a distinctive chemical composition.
+    Understanding these compounds helps us investigate
+    nature's relationship with biology.
+  </p>
+
+  <div class="plant-grid">
+
+    <div class="plant">
+      <h3>Flavonoids</h3>
+      <p>Plant polyphenols investigated for antioxidant
+      properties and cellular interactions.</p>
+    </div>
+
+    <div class="plant">
+      <h3>Alkaloids</h3>
+      <p>Nitrogen-containing natural compounds with
+      diverse structures and biological activities.</p>
+    </div>
+
+    <div class="plant">
+      <h3>Terpenoids</h3>
+      <p>Natural compounds involved in plant defence,
+      aroma and biological interactions.</p>
+    </div>
+
+    <div class="plant">
+      <h3>Polyphenols</h3>
+      <p>Plant-derived compounds investigated for
+      their chemical and biological properties.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOUNDER -->
+
+<section class="founder" id="founder">
+  <div class="eyebrow">The Vision Behind MistFell</div>
+  <h2 class="section-title">Meet the Founder</h2>
+
+  <div class="founder-box">
+
+    <div class="founder-visual">
+      <div>
+        <h2>MISTFELL</h2>
+        <p>Breath Heal Begin</p>
+        <p>Founder • Shreedevi U Joshi</p>
+      </div>
+    </div>
+
+    <div class="founder-text">
+
+      <h3>Shreedevi U Joshi</h3>
+      <p><strong>Founder, MistFell</strong></p>
+
+      <p>
+        MistFell began with a curiosity about the
+        relationship between nature, traditional
+        medicinal knowledge and the human body.
+      </p>
+
+      <p>
+        Across generations, people have observed and
+        documented the medicinal importance of plants,
+        herbs, roots and fruits. Yet much of this
+        knowledge deserves deeper scientific exploration
+        and wider accessibility.
+      </p>
+
+      <p>
+        Shreedevi's vision is to build a knowledge-driven
+        platform that brings together ancient medicinal
+        wisdom and modern scientific understanding.
+      </p>
+
+      <p>
+        Through MistFell, she aims to encourage curiosity,
+        scientific literacy and research into plant
+        compounds, biotechnology and biological mechanisms.
+      </p>
+
+      <p>
+        Her belief is simple: knowledge should not remain
+        limited to a few. Understanding nature and
+        biological science should become more accessible
+        to everyone.
+      </p>
+
+      <div class="social-links">
+
+        <a href="https://www.linkedin.com/in/shreedevi-u-joshi-9a2799413/"
+           target="_blank" rel="noopener noreferrer">
+          Founder LinkedIn ↗
+        </a>
+
+        <a href="https://www.linkedin.com/company/mistfell/"
+           target="_blank" rel="noopener noreferrer">
+          MistFell LinkedIn ↗
+        </a>
+
+        <a href="https://www.instagram.com/mistfell._/"
+           target="_blank" rel="noopener noreferrer">
+          Instagram ↗
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LOGIN PORTAL -->
+
+<section class="login-section" id="login">
+  <div class="eyebrow">MistFell Access Portal</div>
+  <h2 class="section-title">Welcome to Our Knowledge Platform</h2>
+
+  <p class="intro" style="margin-left:auto;margin-right:auto">
+    Different access categories for individuals,
+    institutions and scientific communities.
+    Select your category to continue.
+  </p>
+
+  <div class="login-grid">
+
+    <div class="login-card" onclick="openLogin('Admin')">
+      <div class="symbol">🛡️</div>
+      <h3>Admin</h3>
+      <p>Platform administration</p>
+    </div>
+
+    <div class="login-card" onclick="openLogin('Public')">
+      <div class="symbol">👥</div>
+      <h3>Public</h3>
+      <p>Knowledge and learning access</p>
+    </div>
+
+    <div class="login-card" onclick="openLogin('Universities & Colleges')">
+      <div class="symbol">🎓</div>
+      <h3>Universities & Colleges</h3>
+      <p>Academic and institutional access</p>
+    </div>
+
+    <div class="login-card" onclick="openLogin('Government')">
+      <div class="symbol">🏛️</div>
+      <h3>Government</h3>
+      <p>Institutional access</p>
+    </div>
+
+    <div class="login-card" onclick="openLogin('Researchers')">
+      <div class="symbol">🔬</div>
+      <h3>Researchers</h3>
+      <p>Research knowledge access</p>
+    </div>
+
+    <div class="login-card" onclick="openLogin('Scientists')">
+      <div class="symbol">🧬</div>
+      <h3>Scientists</h3>
+      <p>Scientific community access</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+  <div class="eyebrow">Connect With MistFell</div>
+  <h2 class="section-title">Let's Build Knowledge Together</h2>
+
+  <p>Ancient Wisdom • Modern Science</p>
+  <p>Researching Nature's Intelligence</p>
+
+  <p>
+    Website:
+    <a href="https://www.mistfell.com">www.mistfell.com</a>
+  </p>
+
+  <p>
+    Instagram:
+    <a href="https://www.instagram.com/mistfell._/"
+       target="_blank" rel="noopener noreferrer">
+       @mistfell._
+    </a>
+  </p>
+
+  <p>
+    LinkedIn:
+    <a href="https://www.linkedin.com/company/mistfell/"
+       target="_blank" rel="noopener noreferrer">
+       MistFell Official
+    </a>
+  </p>
+
+  <p>
+    Founder:
+    <a href="https://www.linkedin.com/in/shreedevi-u-joshi-9a2799413/"
+       target="_blank" rel="noopener noreferrer">
+       Shreedevi U Joshi
+    </a>
+  </p>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <h2>MIST<span>FELL</span></h2>
+  <p>Breath Heal Begin</p>
+  <p>Ancient Wisdom • Modern Science</p>
+  <p>Researching Nature's Intelligence</p>
+  <p>© 2026 MistFell. All Rights Reserved.</p>
+  <p>Educational and scientific information only.
+  Not medical advice.</p>
+</footer>
+
+<!-- LOGIN POPUP -->
+
+<div class="modal" id="login-modal">
+  <div class="modal-box">
+
+    <span class="close" onclick="closeLogin()">&times;</span>
+
+    <h2>MistFell Login</h2>
+    <p>Choose your access category and enter your details.</p>
+
+    <form id="login-form">
+
+      <select id="user-role" required>
+        <option value="">Select access category</option>
+        <option>Admin</option>
+        <option>Public</option>
+        <option>Universities & Colleges</option>
+        <option>Government</option>
+        <option>Researchers</option>
+        <option>Scientists</option>
+      </select>
+
+      <input type="email" placeholder="Email address" required>
+
+      <input type="password"
+             placeholder="Password"
+             required>
+
+      <button type="submit" class="btn">Continue</button>
+
+    </form>
+
+    <div id="login-message">
+      Access portal preview. Secure account authentication
+      will be enabled after backend integration.
+    </div>
+
+  </div>
+</div>
+
+<script>
+function openLogin(role) {
+  document.getElementById("login-modal").classList.add("show");
+
+  if(role) {
+    document.getElementById("user-role").value = role;
+  }
+}
+
+function closeLogin() {
+  document.getElementById("login-modal").classList.remove("show");
+}
+
+document.getElementById("login-modal").addEventListener("click", function(e) {
+  if(e.target === this) closeLogin();
+});
+
+document.getElementById("login-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  document.getElementById("login-message").textContent =
+    "This is currently a demonstration portal. Account authentication is not yet connected. Please do not enter real passwords.";
+});
+</script>
+
+</body>
+</html>
